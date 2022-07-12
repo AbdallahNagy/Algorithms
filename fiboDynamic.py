@@ -1,6 +1,5 @@
 
-# Function for nth fibonacci
-# number - Dynamic Programming
+# fibonacci function using Dynamic Programming
 # Taking 1st two fibonacci numbers as 0 and 1
 FibArray = [0, 1]
  
