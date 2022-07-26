@@ -1,13 +1,20 @@
 #bubble sort
+def bubblesort(arr, n):
 
-def bubblesort(arr):
-    for i in range(len(arr)-1, 0, -1):
-        for j in range(i):
-            if arr[j] > arr[i]:
-                temp = arr[j]
-                arr[j] = arr[i]
-                arr[i] = temp
+    for i in range(n):
+        swap = False
+        for j in range(n-i-1):
+            if arr[j] > arr[j+1]:
+                #swap 
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swap = True
 
-arr = [30, 20, 40, 50, 60, 10]
-bubblesort(arr)
-print(arr)
+        #check if arr is sorted
+        if swap == False:
+            return arr
+    
+# Driver Code.
+arr = [4, 6, 9, 1, 5, 3, 2, 7, 10, 8]
+n = len(arr)
+
+print(bubblesort(arr, n))
