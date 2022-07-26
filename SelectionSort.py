@@ -1,13 +1,22 @@
 
-def selection(arr):
-    for idx in range(len(arr)):
-        min_idx = idx
-        for j in range(idx+1, len(arr)):
-            if arr[j] < arr[min_idx]:
+def selection(arr, n):
+
+    for i in range(n):
+        min_idx = i
+        for j in range(i+1, n):
+            if arr[min_idx] > arr[j]:
                 min_idx = j
 
-        arr[idx], arr[min_idx] = arr[min_idx], arr[idx]
+        arr[i], arr[min_idx] = arr[min_idx], arr[i]
 
-arr = [10, 50, 40, 20, 30]
-selection(arr)
-print(arr)
+        # temp = arr[i]
+        # arr[i] = arr[min_idx]
+        # arr[min_idx] = temp
+
+    return arr
+
+# Driver Code.
+arr = [4, 6, 9, 1, 5, 10, 3]
+n = len(arr)
+
+print(selection(arr, n))
