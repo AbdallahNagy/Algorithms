@@ -6,9 +6,11 @@ def merge_sort(unsorted_list):
     #Find the middle point and divide it
     middle = len(unsorted_list) // 2
 
+    #split the list by half
     left_list = unsorted_list[:middle]
     right_list = unsorted_list[middle:]
 
+    #do it untill you reach to one ele in a list
     left_list = merge_sort(left_list)
     right_list = merge_sort(right_list)
 
