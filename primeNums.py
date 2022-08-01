@@ -1,8 +1,10 @@
 
 def getPrimeNums(n):
+    
     prime = list()
     num = 2
     while num <= n:
+        
         flag = False
         for i in range(2, num):
             if num % i == 0:
